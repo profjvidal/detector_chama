@@ -7,13 +7,14 @@ void setup() {
 
 void loop() {
   int leituraSensor = digitalRead(sensorChama);// Passando o valor obtido no sensor para a variável "leituraSensor"
-  // Se for detectado o espectro IR da chama imprime no serial "Pegou fogo!"
+  // Se NÃO for detectado o espectro IR da chama imprime no serial "Tudo certo!"
   if (leituraSensor == HIGH) {
-    Serial.println("Pegou fogo!");
+    Serial.println("Tudo certo!");
   }
-  // Se NÃO for detectado o espectro IR da chama imprime no serial "Tudo certo."
+  // Se for detectado o espectro IR da chama imprime no serial "Pegou fogo!"
   else {
-    Serial.println("Tudo certo.");
+    Serial.println("Pegou fogo!");
   }
   delay(1000);//intervalo entre as leituras e respostas
 } // fim do código :)
+
